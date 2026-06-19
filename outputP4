@@ -1,0 +1,55 @@
+Suppose you have a file raw_data.csv like this:
+Name,Age,City,JoinDate,Salary
+John,25,Mumbai,2024-01-10,50000
+Alice,,Delhi,2024-02-15,60000
+Bob,30,Mumbai,invalid_date,55000
+John,25,Mumbai,2024-01-10,50000
+Emma,28,Pune,2024-03-20,
+
+Then, when you run:
+python data_cleaner.py
+
+and enter:
+Enter dataset path: raw_data.csv
+
+the console output will be approximately:
+============================================================
+ DATA CLEANING AUTOMATION SYSTEM
+============================================================
+
+Enter dataset path: raw_data.csv
+
+ Loaded 5 records
+ Total Columns: 5
+
+ DATASET SUMMARY
+
++----------------------+-------+
+| Metric               | Value |
++----------------------+-------+
+| Total Records        | 5     |
+| Total Columns        | 5     |
+| Missing Values       | 2     |
+| Duplicate Records    | 1     |
+| Memory Usage (MB)    | 0.00  |
++----------------------+-------+
+
+ Handling Missing Values...
+
+ Missing Before: 2
+ Missing After : 0
+
+ Removed 1 duplicate records
+
+ Cleaning Date Columns...
+
+ Standardized JoinDate
+
+ Cleaning Text Columns...
+
+ Cleaned 2 text columns
+
+ Cleaned Dataset Saved:
+ cleaned_data/cleaned_dataset.csv
+
+ Cleaning Completed Successfully
